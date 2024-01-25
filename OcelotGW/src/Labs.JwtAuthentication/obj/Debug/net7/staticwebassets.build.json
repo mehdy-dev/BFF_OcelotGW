@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "AAcCEnjtRmsx4UyArRLiCHZbgM4cef8P9WZQUfgcskE=",
+  "Source": "Labs.JwtAuthentication",
+  "BasePath": "_content/Labs.JwtAuthentication",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>OidcProxy.Net.OpenIdConnect</id>
+    <version>1.0.0</version>
+    <title>OidcProxy.Net.OpenIdConnect</title>
+    <authors>Albert Starreveld</authors>
+    <license type="expression">LGPL-3.0-only</license>
+    <licenseUrl>https://licenses.nuget.org/LGPL-3.0-only</licenseUrl>
+    <icon>logo.png</icon>
+    <readme>Readme.md</readme>
+    <projectUrl>https://bff.gocloudnative.org/</projectUrl>
+    <description>A yarp-based authentication gateway for your service mesh.</description>
+    <tags>BFF, Yarp, OpenId Connect, Identity Server, KeyCloak, Cloud Native</tags>
+    <repository type="git" url="https://github.com/thecloudnativewebapp/OidcProxy.Net" commit="50687dee2d98b828bfbd091e456dab7faea20702" />
+    <dependencies>
+      <group targetFramework="net8.0">
+        <dependency id="OidcProxy.Net" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="IdentityModel.OidcClient" version="5.2.1" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Http" version="2.2.2" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Mvc.Core" version="2.2.5" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net8.0">
+        <frameworkReference name="Microsoft.AspNetCore.App" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="C:\wks\test\Ocelot-Multi-Auth-Scheme\OcelotGW\src\OidcProxy.Net.OpenIdConnect\bin\Debug\net8.0\OidcProxy.Net.OpenIdConnect.dll" target="lib\net8.0\OidcProxy.Net.OpenIdConnect.dll" />
+    <file src="C:\wks\test\Ocelot-Multi-Auth-Scheme\OcelotGW\logo.png" target=".\logo.png" />
+    <file src="C:\wks\test\Ocelot-Multi-Auth-Scheme\OcelotGW\src\OidcProxy.Net.OpenIdConnect\Readme.md" target=".\Readme.md" />
+  </files>
+</package>

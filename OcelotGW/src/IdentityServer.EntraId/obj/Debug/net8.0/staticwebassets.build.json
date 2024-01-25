@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "EIzBF/QPa4wsKsIPrI7h3/gpz2/0sUAYjQu8mKj3fn0=",
+  "Source": "IdentityServer.EntraId",
+  "BasePath": "_content/IdentityServer.EntraId",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
