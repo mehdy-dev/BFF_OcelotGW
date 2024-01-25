@@ -20,7 +20,22 @@ project : https://github.com/ricardodemauro/Labs.JwtAuthentication
   "exp": 1706143497,
   "iss": "https://localhost:7004"
 }
+ `````
 > generate the token
-  ![image](https://github.com/mehdy-dev/BFF_OcelotGW/assets/84580354/25ac94e4-1fe9-4b6a-820c-29b29774e3a3)
 
-2-Call protected api sending the 
+![image](https://github.com/mehdy-dev/BFF_OcelotGW/assets/84580354/2daf4fbd-3105-48c5-97ab-74603d8407cc)
+
+
+2-Call protected api 
+
+ > http://localhost:5000/apigateway/categories
+
+ > Authentication type = bearer Token
+
+ > Token : "eyJhbGciOiJIUzUxMiIsI"
+
+3- response should look like this 
+
+![image](https://github.com/mehdy-dev/BFF_OcelotGW/assets/84580354/5bfe2719-abb2-4937-b0ac-9eb915455d80)
+
+
