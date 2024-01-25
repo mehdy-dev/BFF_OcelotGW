@@ -1,41 +1,36 @@
 # BFF_OcelotGW
 Prototype Pattern BFF Indenity Server Ocelot Orchestration
 
-1-protect upstrean gateway call using jwt token 
->need a jwt issuer as during the validation ocelot will search for "Issuer" and if missing it fails
+this sample/prototype contains sevral component and pattern 
+1- Ocelot APi Gateway
+2- OidcProxy
+3- BFF Pattern
+4- Razor Page FE
+5- Random Resources API
 
-project : https://github.com/ricardodemauro/Labs.JwtAuthentication
+
+![image](https://github.com/mehdy-dev/BFF_OcelotGW/assets/84580354/5f19d9fa-d0b2-4a56-a435-b97d5e5bff17)
+
+
+> how to run the project
+
+  1- need app registration for Microsoft Entra Id Authentication 
+  2- dont forget admin consent 
+  3- callback Url is important 
+  4- the following component should run as a whole microservices architecture 
+      a- FE Razor App
+      b- Ocelot API Gateway
+      c- Identity Server OidcProxy
+  5- set the config file oidcProxy "Microsoft Entra Id"
+  6- run the projects 
+    a- \OcelotGW dotnet run
+    b- \FE.Endpoint dotnet run
+    c- \IdentityServer.EntraId dotnet run
+
+  7-navigate to the FE page and start by login 
+
+  ![image](https://github.com/mehdy-dev/BFF_OcelotGW/assets/84580354/7c32d425-2a3a-4e20-80f3-16e51452449c)
+
+    
   
-  `````{
-  "sub": "johndoe",
-  "name": "johndoe",
-  "aud": [
-    "https://localhost:7004",
-    "https://localhost:7004"
-  ],
-  "role": [
-    "read_todo",
-    "create_todo"
-  ],
-  "exp": 1706143497,
-  "iss": "https://localhost:7004"
-}
- `````
-> generate the token
-
-![image](https://github.com/mehdy-dev/BFF_OcelotGW/assets/84580354/2daf4fbd-3105-48c5-97ab-74603d8407cc)
-
-
-2-Call protected api 
-
- > http://localhost:5000/apigateway/categories
-
- > Authentication type = bearer Token
-
- > Token : "eyJhbGciOiJIUzUxMiIsI"
-
-3- response should look like this 
-
-![image](https://github.com/mehdy-dev/BFF_OcelotGW/assets/84580354/5bfe2719-abb2-4937-b0ac-9eb915455d80)
-
 
