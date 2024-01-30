@@ -1,4 +1,5 @@
 using APIGateway.Config;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -9,6 +10,15 @@ using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 using System;
 using System.Text;
+using Microsoft.Identity.Web;
+using Microsoft.Extensions.Options;
+using System.IdentityModel.Tokens.Jwt;
+using Microsoft.AspNetCore.DataProtection.KeyManagement;
+using System.Security.Cryptography;
+using Microsoft.IdentityModel.Logging;
+using Microsoft.IdentityModel.JsonWebTokens;
+
+
 
 namespace APIGateway
 {
@@ -29,34 +39,94 @@ namespace APIGateway
 
             OcelotConfiguration = builder.Build();
         }
-        
+
         public void ConfigureServices(IServiceCollection services)
         {
-            var jwtOptions = Configuration
-            .GetSection("JwtOptions")
-            .Get<JwtOptions>();
+            //var jwtOptions = Configuration
+            //.GetSection("JwtOptions")
+            //.Get<JwtOptions>();
 
-            services.AddAuthentication().AddJwtBearer("jwt", options =>
+            //services.AddAuthentication().AddJwtBearer("jwt", options =>
+            //{
+            //    //convert the string signing key to byte array
+            //    byte[] signingKeyBytes = Encoding.ASCII
+            //        .GetBytes(jwtOptions.SigningKey);
+
+
+            //    options.TokenValidationParameters = new TokenValidationParameters
+            //    {
+            //        ValidateIssuer = true,
+            //        ValidateAudience = true,
+            //        ValidateLifetime = true,
+            //        ValidateIssuerSigningKey = true,
+            //        ValidIssuer = jwtOptions.Issuer,
+            //        ValidAudience = jwtOptions.Audience,
+            //         IssuerSigningKey = new SymmetricSecurityKey(signingKeyBytes)
+            //        //SignatureValidator = delegate (string token, TokenValidationParameters parameters)
+            //        //{
+            //        //    var jwt = new JwtSecurityToken(token);
+
+            //        //    return jwt;
+            //        //},
+            //    };
+            //});
+
+            var jwtOptionsEntra = Configuration
+            //.GetSection("JwtOptions")
+            .GetSection("EntraId")
+            .Get<JwtOptionEntraId>();
+
+            //services.AddAuthentication("jwt")
+            //.AddMicrosoftIdentityWebApi(Configuration.GetSection("EntraId"));
+
+
+
+            //services.Configure<JwtBearerOptions>("jwt", options =>
+            //{
+            //    options.TokenValidationParameters.ValidateIssuer = false; // accept several tenants (here simplified)
+            //    //options.Events = new JwtBearerEvents
+            //    //{
+            //    //    OnAuthenticationFailed = AuthenticationFailed
+            //    //};
+
+            //    options.TokenValidationParameters = new TokenValidationParameters()
+            //    {
+            //        ValidateLifetime = true,
+            //        ValidateAudience = true,
+            //        ValidAudience = jwtOptionsEntra.Audience
+            //    };
+            //});
+
+
+
+            services
+            .AddAuthentication("jwt")
+            .AddJwtBearer("jwt", options =>
             {
-                //convert the string signing key to byte array
                 byte[] signingKeyBytes = Encoding.UTF8
-                    .GetBytes(jwtOptions.SigningKey);
-
+                    .GetBytes(jwtOptionsEntra.Kid);
                 options.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuer = true,
                     ValidateAudience = true,
                     ValidateLifetime = true,
-                    ValidateIssuerSigningKey = true,
-                    ValidIssuer = jwtOptions.Issuer,
-                    ValidAudience = jwtOptions.Audience,
-                    IssuerSigningKey = new SymmetricSecurityKey(signingKeyBytes)
+                    ValidateIssuerSigningKey = false,
+                    SignatureValidator = delegate (string token, TokenValidationParameters parameters)
+                    {
+                        var jwt = new JsonWebToken(token);
+
+                        return jwt;
+                    },
+                    ValidIssuer = jwtOptionsEntra.Instance,
+                    ValidAudience = jwtOptionsEntra.Audience,
+                   // IssuerSigningKey = new SymmetricSecurityKey(signingKeyBytes)
+
                 };
-
             });
-
+            //.AddMicrosoftIdentityWebApi(
+            //        o => Configuration.Bind("EntraId", o),
+            //        o => Configuration.Bind("EntraId", o));
             services.AddOcelot(OcelotConfiguration);
-
             services.AddControllers();
         }
 

@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("A yarp-based authentication gateway for your service mesh.")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.1.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.1.0+913e11d2acba65506a52524bf852eeb3ee25383e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.1.0+ad859b6a8f4ba299408256ae8df5b2c314958903")]
 [assembly: System.Reflection.AssemblyProductAttribute("OidcProxy.Net.EntraId")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OidcProxy.Net.EntraId")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.1.0.0")]

@@ -12,7 +12,7 @@
     <projectUrl>https://bff.gocloudnative.org/</projectUrl>
     <description>A yarp-based authentication gateway for your service mesh.</description>
     <tags>BFF, Yarp, Microsoft Entra Ad, Cloud Native</tags>
-    <repository type="git" url="https://github.com/thecloudnativewebapp/OidcProxy.Net" commit="50687dee2d98b828bfbd091e456dab7faea20702" />
+    <repository type="git" url="https://github.com/thecloudnativewebapp/OidcProxy.Net" commit="ad859b6a8f4ba299408256ae8df5b2c314958903" />
     <dependencies>
       <group targetFramework="net8.0">
         <dependency id="OidcProxy.Net.OpenIdConnect" version="1.0.0" exclude="Build,Analyzers" />
@@ -27,8 +27,8 @@
     </frameworkReferences>
   </metadata>
   <files>
-    <file src="C:\wks\test\Ocelot-Multi-Auth-Scheme\OcelotGW\src\OidcProxy.Net.EntraId\bin\Debug\net8.0\OidcProxy.Net.EntraId.dll" target="lib\net8.0\OidcProxy.Net.EntraId.dll" />
-    <file src="C:\wks\test\Ocelot-Multi-Auth-Scheme\OcelotGW\logo.png" target=".\logo.png" />
-    <file src="C:\wks\test\Ocelot-Multi-Auth-Scheme\OcelotGW\src\OidcProxy.Net.EntraId\Readme.md" target=".\Readme.md" />
+    <file src="C:\wks\prj\fin\BFF_OcelotGW\OcelotGW\src\OidcProxy.Net.EntraId\bin\Debug\net8.0\OidcProxy.Net.EntraId.dll" target="lib\net8.0\OidcProxy.Net.EntraId.dll" />
+    <file src="C:\wks\prj\fin\BFF_OcelotGW\OcelotGW\logo.png" target=".\logo.png" />
+    <file src="C:\wks\prj\fin\BFF_OcelotGW\OcelotGW\src\OidcProxy.Net.EntraId\Readme.md" target=".\Readme.md" />
   </files>
 </package>

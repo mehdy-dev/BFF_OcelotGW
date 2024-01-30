@@ -20,7 +20,7 @@
         <PackageReadmeFile>Readme.md</PackageReadmeFile>
         <PackageIcon>logo.png</PackageIcon>
         <SignAssembly>true</SignAssembly>
-        <LangVersion>11</LangVersion>
+        <LangVersion>12.0</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>

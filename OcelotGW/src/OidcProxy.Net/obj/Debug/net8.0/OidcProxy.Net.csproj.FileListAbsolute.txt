@@ -37,3 +37,16 @@ C:\wks\test\Ocelot-Multi-Auth-Scheme\OcelotGW\src\OidcProxy.Net\obj\Debug\net8.0
 C:\wks\test\Ocelot-Multi-Auth-Scheme\OcelotGW\src\OidcProxy.Net\obj\Debug\net8.0\refint\OidcProxy.Net.dll
 C:\wks\test\Ocelot-Multi-Auth-Scheme\OcelotGW\src\OidcProxy.Net\obj\Debug\net8.0\OidcProxy.Net.pdb
 C:\wks\test\Ocelot-Multi-Auth-Scheme\OcelotGW\src\OidcProxy.Net\obj\Debug\net8.0\ref\OidcProxy.Net.dll
+C:\wks\prj\fin\BFF_OcelotGW\OcelotGW\src\OidcProxy.Net\bin\Debug\net8.0\OidcProxy.Net.deps.json
+C:\wks\prj\fin\BFF_OcelotGW\OcelotGW\src\OidcProxy.Net\bin\Debug\net8.0\OidcProxy.Net.dll
+C:\wks\prj\fin\BFF_OcelotGW\OcelotGW\src\OidcProxy.Net\bin\Debug\net8.0\OidcProxy.Net.pdb
+C:\wks\prj\fin\BFF_OcelotGW\OcelotGW\src\OidcProxy.Net\obj\Debug\net8.0\OidcProxy.Net.csproj.AssemblyReference.cache
+C:\wks\prj\fin\BFF_OcelotGW\OcelotGW\src\OidcProxy.Net\obj\Debug\net8.0\OidcProxy.Net.GeneratedMSBuildEditorConfig.editorconfig
+C:\wks\prj\fin\BFF_OcelotGW\OcelotGW\src\OidcProxy.Net\obj\Debug\net8.0\OidcProxy.Net.AssemblyInfoInputs.cache
+C:\wks\prj\fin\BFF_OcelotGW\OcelotGW\src\OidcProxy.Net\obj\Debug\net8.0\OidcProxy.Net.AssemblyInfo.cs
+C:\wks\prj\fin\BFF_OcelotGW\OcelotGW\src\OidcProxy.Net\obj\Debug\net8.0\OidcProxy.Net.csproj.CoreCompileInputs.cache
+C:\wks\prj\fin\BFF_OcelotGW\OcelotGW\src\OidcProxy.Net\obj\Debug\net8.0\OidcProxy.Net.sourcelink.json
+C:\wks\prj\fin\BFF_OcelotGW\OcelotGW\src\OidcProxy.Net\obj\Debug\net8.0\OidcProxy.Net.dll
+C:\wks\prj\fin\BFF_OcelotGW\OcelotGW\src\OidcProxy.Net\obj\Debug\net8.0\refint\OidcProxy.Net.dll
+C:\wks\prj\fin\BFF_OcelotGW\OcelotGW\src\OidcProxy.Net\obj\Debug\net8.0\OidcProxy.Net.pdb
+C:\wks\prj\fin\BFF_OcelotGW\OcelotGW\src\OidcProxy.Net\obj\Debug\net8.0\ref\OidcProxy.Net.dll

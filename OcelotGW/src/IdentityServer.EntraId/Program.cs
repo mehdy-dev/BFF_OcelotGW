@@ -62,9 +62,12 @@ app.MapGet("/custom/me", async context =>
             })
         };
 
+        var TokenResponse  = context.Session.GetAccessToken();
+
         queryString["param1"] = subject.Claims.Select(x => $"{x.Value}").Where(v => v.Contains("@")).FirstOrDefault();
+        queryString["param2"] = TokenResponse;
         //queryString["param2"] = identity.Claims.Select(x => x.Subject.Name).First();
-       // queryString["param3"] = identity.Claims.Select(x => x.).First();
+        // queryString["param3"] = identity.Claims.Select(x => x.).First();
 
         url += "?" + queryString;
 

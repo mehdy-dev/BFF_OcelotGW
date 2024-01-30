@@ -4,18 +4,25 @@
     ViewData["Title"] = "Home page";
 
 }
-
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
 
 
     <h2>@ViewData["user"]</h2>
-
+    <h2>@ViewData["accessToken"]</h2>
+    <h2>@ViewData["res"]</h2>
 
     <form action="http://localhost:5000/apigateway/identity" method="get">
         <input type="submit" value="Login Microsoft Entra"
                name="Login" id="frm1_submit" />
     </form>
+
+  
+    <form method="post">
+        <input type="submit" value="Access Protected API"
+               name="Access Protected API using access token" id="frm1_submit" />
+    </form>
+   
 
     
     
