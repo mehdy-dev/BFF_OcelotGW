@@ -1,5 +1,9 @@
 # BFF OcelotGW OidCProxy Microsoft Entra Id
 Prototype Pattern BFF Indenity Server Ocelot Orchestration
+# Credits to 
+`` 1- OidcProxy : https://github.com/thecloudnativewebapp/OidcProxy.Net
+   2- Ocelot : https://github.com/ThreeMammals/Ocelot
+
 
 this sample/prototype contains sevral component and pattern 
   `````
