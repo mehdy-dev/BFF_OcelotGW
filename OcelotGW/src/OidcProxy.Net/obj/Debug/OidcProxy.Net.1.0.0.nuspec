@@ -11,7 +11,7 @@
     <projectUrl>https://bff.gocloudnative.org/</projectUrl>
     <description>A yarp-based authentication gateway for your service mesh.</description>
     <tags>BFF, Yarp, OIDC, Cloud Native</tags>
-    <repository type="git" url="https://github.com/thecloudnativewebapp/OidcProxy.Net" commit="ad859b6a8f4ba299408256ae8df5b2c314958903" />
+    <repository type="git" url="https://github.com/thecloudnativewebapp/OidcProxy.Net" commit="4c3b885654464611e98b929d5f3b194238701532" />
     <dependencies>
       <group targetFramework="net8.0">
         <dependency id="Microsoft.AspNetCore.DataProtection.StackExchangeRedis" version="8.0.1" exclude="Build,Analyzers" />

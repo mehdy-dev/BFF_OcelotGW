@@ -726,7 +726,7 @@
           }
         }
       },
-      "Microsoft.IdentityModel.Abstractions/7.2.0": {
+      "Microsoft.IdentityModel.Abstractions/7.3.0": {
         "type": "package",
         "compile": {
           "lib/net8.0/Microsoft.IdentityModel.Abstractions.dll": {
@@ -739,10 +739,10 @@
           }
         }
       },
-      "Microsoft.IdentityModel.JsonWebTokens/7.2.0": {
+      "Microsoft.IdentityModel.JsonWebTokens/7.3.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.IdentityModel.Tokens": "7.2.0"
+          "Microsoft.IdentityModel.Tokens": "7.3.0"
         },
         "compile": {
           "lib/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll": {
@@ -755,10 +755,10 @@
           }
         }
       },
-      "Microsoft.IdentityModel.Logging/7.2.0": {
+      "Microsoft.IdentityModel.Logging/7.3.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.IdentityModel.Abstractions": "7.2.0"
+          "Microsoft.IdentityModel.Abstractions": "7.3.0"
         },
         "compile": {
           "lib/net8.0/Microsoft.IdentityModel.Logging.dll": {
@@ -771,10 +771,10 @@
           }
         }
       },
-      "Microsoft.IdentityModel.Tokens/7.2.0": {
+      "Microsoft.IdentityModel.Tokens/7.3.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.IdentityModel.Logging": "7.2.0"
+          "Microsoft.IdentityModel.Logging": "7.3.0"
         },
         "compile": {
           "lib/net8.0/Microsoft.IdentityModel.Tokens.dll": {
@@ -858,6 +858,61 @@
             "related": ".xml"
           }
         }
+      },
+      "OidcProxy.Net/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.DataProtection.StackExchangeRedis": "8.0.1",
+          "Microsoft.Extensions.Caching.StackExchangeRedis": "8.0.1",
+          "Microsoft.Identity.Client": "4.59.0",
+          "RedLock.net": "2.3.2",
+          "System.IdentityModel.Tokens.Jwt": "7.3.0",
+          "Yarp.ReverseProxy": "2.1.0"
+        },
+        "compile": {
+          "lib/net8.0/OidcProxy.Net.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/OidcProxy.Net.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "OidcProxy.Net.EntraId/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel.OidcClient": "5.2.1",
+          "OidcProxy.Net": "1.1.1",
+          "OidcProxy.Net.OpenIdConnect": "1.1.1"
+        },
+        "compile": {
+          "lib/net8.0/OidcProxy.Net.EntraId.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/OidcProxy.Net.EntraId.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "OidcProxy.Net.OpenIdConnect/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "IdentityModel.OidcClient": "5.2.1",
+          "Microsoft.AspNetCore.Http": "2.2.2",
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
+          "OidcProxy.Net": "1.1.1"
+        },
+        "compile": {
+          "lib/net8.0/OidcProxy.Net.OpenIdConnect.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/OidcProxy.Net.OpenIdConnect.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "Pipelines.Sockets.Unofficial/2.2.8": {
         "type": "package",
@@ -1056,11 +1111,11 @@
           }
         }
       },
-      "System.IdentityModel.Tokens.Jwt/7.2.0": {
+      "System.IdentityModel.Tokens.Jwt/7.3.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.IdentityModel.JsonWebTokens": "7.2.0",
-          "Microsoft.IdentityModel.Tokens": "7.2.0"
+          "Microsoft.IdentityModel.JsonWebTokens": "7.3.0",
+          "Microsoft.IdentityModel.Tokens": "7.3.0"
         },
         "compile": {
           "lib/net8.0/System.IdentityModel.Tokens.Jwt.dll": {
@@ -1655,64 +1710,6 @@
           "lib/net8.0/Yarp.ReverseProxy.dll": {
             "related": ".xml"
           }
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
-      "OidcProxy.Net/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "Microsoft.AspNetCore.DataProtection.StackExchangeRedis": "8.0.1",
-          "Microsoft.Extensions.Caching.StackExchangeRedis": "8.0.1",
-          "Microsoft.Identity.Client": "4.59.0",
-          "RedLock.net": "2.3.2",
-          "System.IdentityModel.Tokens.Jwt": "7.2.0",
-          "Yarp.ReverseProxy": "2.1.0"
-        },
-        "compile": {
-          "bin/placeholder/OidcProxy.Net.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/OidcProxy.Net.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
-      "OidcProxy.Net.EntraId/1.1.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "IdentityModel.OidcClient": "5.2.1",
-          "OidcProxy.Net": "1.0.0",
-          "OidcProxy.Net.OpenIdConnect": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/OidcProxy.Net.EntraId.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/OidcProxy.Net.EntraId.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
-      "OidcProxy.Net.OpenIdConnect/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "IdentityModel.OidcClient": "5.2.1",
-          "Microsoft.AspNetCore.Http": "2.2.2",
-          "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
-          "OidcProxy.Net": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/OidcProxy.Net.OpenIdConnect.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/OidcProxy.Net.OpenIdConnect.dll": {}
         },
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
@@ -2598,10 +2595,10 @@
         "microsoft.identity.client.nuspec"
       ]
     },
-    "Microsoft.IdentityModel.Abstractions/7.2.0": {
-      "sha512": "7YgmrhCORuOP8miZJLdQhSEzyHdD5PfRjaqINbqSzS9LKEfOoHq8S9o4FVmK9Mu7Gts8MfL46sshwCk4AgjNyw==",
+    "Microsoft.IdentityModel.Abstractions/7.3.0": {
+      "sha512": "KAxbZc6Ptnut57o15cd3SFx6FLHzsWXENECtMpep2U8uKJddDo8nTs9SSDC946cwGoQ4hednKNC/x0w+SKfanA==",
       "type": "package",
-      "path": "microsoft.identitymodel.abstractions/7.2.0",
+      "path": "microsoft.identitymodel.abstractions/7.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2617,14 +2614,14 @@
         "lib/net8.0/Microsoft.IdentityModel.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.IdentityModel.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.IdentityModel.Abstractions.xml",
-        "microsoft.identitymodel.abstractions.7.2.0.nupkg.sha512",
+        "microsoft.identitymodel.abstractions.7.3.0.nupkg.sha512",
         "microsoft.identitymodel.abstractions.nuspec"
       ]
     },
-    "Microsoft.IdentityModel.JsonWebTokens/7.2.0": {
-      "sha512": "zLFA9IBxDWw6Y1nz2PPZyQvF+ZZ4aW1pwgtwusQB39lgxOc2xVqZ8gitsuT1rwyuIbchGOWbax4fsJ8OgGRxSQ==",
+    "Microsoft.IdentityModel.JsonWebTokens/7.3.0": {
+      "sha512": "ZZfBPOxFI6IDijGT6h0GybQ/D0/MYraMEoCc71hYezpa02EFNbodpN0EM5zwz179x8jUF8ltws0oSBybavrjVw==",
       "type": "package",
-      "path": "microsoft.identitymodel.jsonwebtokens/7.2.0",
+      "path": "microsoft.identitymodel.jsonwebtokens/7.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2640,14 +2637,14 @@
         "lib/net8.0/Microsoft.IdentityModel.JsonWebTokens.xml",
         "lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll",
         "lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.xml",
-        "microsoft.identitymodel.jsonwebtokens.7.2.0.nupkg.sha512",
+        "microsoft.identitymodel.jsonwebtokens.7.3.0.nupkg.sha512",
         "microsoft.identitymodel.jsonwebtokens.nuspec"
       ]
     },
-    "Microsoft.IdentityModel.Logging/7.2.0": {
-      "sha512": "U15cZGq0JfkFXKDaDalq75WKGJniZnV0D6tCbaqc/NgLpIIO/Sq56PGr1v9fhPmXW2xb6ParGFfZkfryewmpWQ==",
+    "Microsoft.IdentityModel.Logging/7.3.0": {
+      "sha512": "d4/2rzo6jIh4X8MxCoBDoU0VRQUW7regZ/i6fuUvWTrMPYOFtulyMeJ95TkHS5UsiDEB5WCAmOi2YGp7AVPogg==",
       "type": "package",
-      "path": "microsoft.identitymodel.logging/7.2.0",
+      "path": "microsoft.identitymodel.logging/7.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2663,14 +2660,14 @@
         "lib/net8.0/Microsoft.IdentityModel.Logging.xml",
         "lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll",
         "lib/netstandard2.0/Microsoft.IdentityModel.Logging.xml",
-        "microsoft.identitymodel.logging.7.2.0.nupkg.sha512",
+        "microsoft.identitymodel.logging.7.3.0.nupkg.sha512",
         "microsoft.identitymodel.logging.nuspec"
       ]
     },
-    "Microsoft.IdentityModel.Tokens/7.2.0": {
-      "sha512": "ycDxTRKNG2ad+y8166YuE0vqbzONEcgoZhMeOfqOoC4GDNOGEYlMoSS+Qm6n/GBHgW6FNmNxpXOUJLRMbJxcWQ==",
+    "Microsoft.IdentityModel.Tokens/7.3.0": {
+      "sha512": "WF93Qb03/zY83dlne1jOX7yVBNZREVSWCInHfw2czHaVQoUFXIIGScZ/S4iML3Nxsi2Xdw5yTRujffC508v6Ag==",
       "type": "package",
-      "path": "microsoft.identitymodel.tokens/7.2.0",
+      "path": "microsoft.identitymodel.tokens/7.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2686,7 +2683,7 @@
         "lib/net8.0/Microsoft.IdentityModel.Tokens.xml",
         "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll",
         "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.xml",
-        "microsoft.identitymodel.tokens.7.2.0.nupkg.sha512",
+        "microsoft.identitymodel.tokens.7.3.0.nupkg.sha512",
         "microsoft.identitymodel.tokens.nuspec"
       ]
     },
@@ -2758,6 +2755,47 @@
         "newtonsoft.json.9.0.1.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "tools/install.ps1"
+      ]
+    },
+    "OidcProxy.Net/1.1.1": {
+      "sha512": "yW6Q2+trrZVIOaiWLeXmZaO0Kllmv6mUySYfQKYkE5HTHxPaDHnwln0/H8AwYPnAdQEOkd/KqvKeAgSKOxyGXQ==",
+      "type": "package",
+      "path": "oidcproxy.net/1.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net8.0/OidcProxy.Net.dll",
+        "logo.png",
+        "oidcproxy.net.1.1.1.nupkg.sha512",
+        "oidcproxy.net.nuspec"
+      ]
+    },
+    "OidcProxy.Net.EntraId/1.1.1": {
+      "sha512": "SiA900f8CxcuTyeHhXLpK5ycOIafJGHcd5LUvVqzOQI/69BEOoJsAoltCWH4l2C4s6aWBXZjhTsd4pgxnfk+hA==",
+      "type": "package",
+      "path": "oidcproxy.net.entraid/1.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Readme.md",
+        "lib/net8.0/OidcProxy.Net.EntraId.dll",
+        "logo.png",
+        "oidcproxy.net.entraid.1.1.1.nupkg.sha512",
+        "oidcproxy.net.entraid.nuspec"
+      ]
+    },
+    "OidcProxy.Net.OpenIdConnect/1.1.1": {
+      "sha512": "wx280PGHMdVZOos+aC9Og0MLq/2rsZduuXKlKdJliBvd+Eq1mvRwIkiqHAhBYOYBKj1Xmz0HlW5ZENwr6rg1OA==",
+      "type": "package",
+      "path": "oidcproxy.net.openidconnect/1.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Readme.md",
+        "lib/net8.0/OidcProxy.Net.OpenIdConnect.dll",
+        "logo.png",
+        "oidcproxy.net.openidconnect.1.1.1.nupkg.sha512",
+        "oidcproxy.net.openidconnect.nuspec"
       ]
     },
     "Pipelines.Sockets.Unofficial/2.2.8": {
@@ -3310,10 +3348,10 @@
         "system.globalization.nuspec"
       ]
     },
-    "System.IdentityModel.Tokens.Jwt/7.2.0": {
-      "sha512": "Z3Fmkrxkp+o51ANMO/PqASRRlEz8dH4mTWwZXMFMXZt2bUGztBiNcIDnwBCElYLYpzpmz4sIqHb6aW8QVLe6YQ==",
+    "System.IdentityModel.Tokens.Jwt/7.3.0": {
+      "sha512": "fy49FSvnrHbF/BDfkWMsMyABI8YsRF1C3zyzCgVX6QgUtXuh0wb5qY6iCRd9K9qlTs9AyAqjEaZLwmf6L7q4dQ==",
       "type": "package",
-      "path": "system.identitymodel.tokens.jwt/7.2.0",
+      "path": "system.identitymodel.tokens.jwt/7.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3329,7 +3367,7 @@
         "lib/net8.0/System.IdentityModel.Tokens.Jwt.xml",
         "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll",
         "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.xml",
-        "system.identitymodel.tokens.jwt.7.2.0.nupkg.sha512",
+        "system.identitymodel.tokens.jwt.7.3.0.nupkg.sha512",
         "system.identitymodel.tokens.jwt.nuspec"
       ]
     },
@@ -5246,21 +5284,6 @@
         "yarp.reverseproxy.2.1.0.nupkg.sha512",
         "yarp.reverseproxy.nuspec"
       ]
-    },
-    "OidcProxy.Net/1.0.0": {
-      "type": "project",
-      "path": "../OidcProxy.Net/OidcProxy.Net.csproj",
-      "msbuildProject": "../OidcProxy.Net/OidcProxy.Net.csproj"
-    },
-    "OidcProxy.Net.EntraId/1.1.0": {
-      "type": "project",
-      "path": "../OidcProxy.Net.EntraId/OidcProxy.Net.EntraId.csproj",
-      "msbuildProject": "../OidcProxy.Net.EntraId/OidcProxy.Net.EntraId.csproj"
-    },
-    "OidcProxy.Net.OpenIdConnect/1.0.0": {
-      "type": "project",
-      "path": "../OidcProxy.Net.OpenIdConnect/OidcProxy.Net.OpenIdConnect.csproj",
-      "msbuildProject": "../OidcProxy.Net.OpenIdConnect/OidcProxy.Net.OpenIdConnect.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5268,7 +5291,9 @@
       "Microsoft.AspNetCore.DataProtection.StackExchangeRedis >= 8.0.1",
       "Microsoft.Extensions.Caching.StackExchangeRedis >= 8.0.1",
       "Microsoft.Identity.Client >= 4.59.0",
-      "OidcProxy.Net.EntraId >= 1.1.0",
+      "OidcProxy.Net >= 1.1.1",
+      "OidcProxy.Net.EntraId >= 1.1.1",
+      "OidcProxy.Net.OpenIdConnect >= 1.1.1",
       "Yarp.ReverseProxy >= 2.1.0"
     ]
   },
@@ -5298,11 +5323,7 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {
-            "C:\\wks\\prj\\fin\\BFF_OcelotGW\\OcelotGW\\src\\OidcProxy.Net.EntraId\\OidcProxy.Net.EntraId.csproj": {
-              "projectPath": "C:\\wks\\prj\\fin\\BFF_OcelotGW\\OcelotGW\\src\\OidcProxy.Net.EntraId\\OidcProxy.Net.EntraId.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -5326,6 +5347,18 @@
           "Microsoft.Identity.Client": {
             "target": "Package",
             "version": "[4.59.0, )"
+          },
+          "OidcProxy.Net": {
+            "target": "Package",
+            "version": "[1.1.1, )"
+          },
+          "OidcProxy.Net.EntraId": {
+            "target": "Package",
+            "version": "[1.1.1, )"
+          },
+          "OidcProxy.Net.OpenIdConnect": {
+            "target": "Package",
+            "version": "[1.1.1, )"
           },
           "Yarp.ReverseProxy": {
             "target": "Package",

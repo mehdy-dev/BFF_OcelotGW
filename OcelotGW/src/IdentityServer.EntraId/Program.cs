@@ -1,5 +1,5 @@
 using System.Security.Claims;
-using OidcProxy.Net.EntraId;
+using Host.Config;
 using OidcProxy.Net;
 using Host;
 using StackExchange.Redis;
@@ -10,6 +10,7 @@ using Microsoft.Net.Http.Headers;
 using System.Net.Http;
 using Microsoft.AspNetCore.DataProtection.KeyManagement;
 using Newtonsoft.Json.Linq;
+
 var builder = WebApplication.CreateBuilder(args);
 
 //var redisConnectionString = builder.Configuration.GetSection("ConnectionStrings:Redis").Get<string>();

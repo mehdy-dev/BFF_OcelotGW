@@ -13,11 +13,10 @@
     <PackageReference Include="Microsoft.AspNetCore.DataProtection.StackExchangeRedis" Version="8.0.1" />
     <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="8.0.1" />
     <PackageReference Include="Microsoft.Identity.Client" Version="4.59.0" />
+    <PackageReference Include="OidcProxy.Net" Version="1.1.1" />
+    <PackageReference Include="OidcProxy.Net.EntraId" Version="1.1.1" />
+    <PackageReference Include="OidcProxy.Net.OpenIdConnect" Version="1.1.1" />
     <PackageReference Include="Yarp.ReverseProxy" Version="2.1.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\OidcProxy.Net.EntraId\OidcProxy.Net.EntraId.csproj" />
   </ItemGroup>
 
   <ItemGroup>
