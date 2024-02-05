@@ -350,4 +350,6 @@ MigrationBackup/
 .ionide/
 
 # json Settings with entra 
-appsettings.json
+OcelotGW/src/IdentityServer.EntraId/appsettings.json
+OcelotGW/src/APIGateway/appsettings.json
+
